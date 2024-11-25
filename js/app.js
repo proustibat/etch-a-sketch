@@ -2,7 +2,7 @@ import debounce from "lodash/debounce";
 
 let TILESIZE = 10;
 let STRENGTH = 0.1;
-let COLOR = "#000000";
+let COLOR = "#1ab6e6";
 
 let lastHoveredEl = null;
 let elementsCoord = [];
@@ -121,6 +121,12 @@ const initConfig = () => {
   elColor.addEventListener("input", (event) => {
     COLOR = elColor.value;
   })
+
+  // Refresh
+  const elRefreshButton = document.querySelector("footer button");
+  elRefreshButton.addEventListener("click", () => {
+    updateGrid();
+  });
 }
 
 
