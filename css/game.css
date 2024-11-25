@@ -15,7 +15,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  /*flex: 1;*/
   touch-action: manipulation;
 }
 
@@ -30,11 +29,11 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px;
+  div {
+    border: 1px solid rgb(0,0,0, 0.06);
+  }
 }
 
-.grid div {
-  border: 1px solid rgb(0,0,0, 0.06);
-}
 
 footer {
   padding: 0.8em;
@@ -42,31 +41,21 @@ footer {
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-rows: repeat(3, auto);
+  >div {
+    margin: 0.3em 0.5em;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    button {
+      outline: none;
+      padding: 1em;
+      border: none;
+      margin: 0;
+    }
+    &&:last-child {
+      grid-row: 1 / span 3;
+      grid-column: 2 / span 2;
+    }
+  }
 }
-footer>div {
-  margin: 0.3em 0.5em;
-  padding: 0;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-footer>div:last-child {
-  grid-row: 1 / span 3;
-  grid-column: 2 / span 2;
-}
-footer div button {
-  outline: none;
-  padding: 1em;
-  border: none;
-  margin: 0;
-}
-
-/*@media (hover: hover) {*/
-/*  .grid div:hover {*/
-/*    background: red;*/
-/*  }*/
-/*}*/
-
-/*.grid div.hover {*/
-/*  background: red;*/
-/*}*/
