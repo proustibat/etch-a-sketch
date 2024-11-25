@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  min-width: 100vw;
+  min-height: 100vh;
+  grid-template-rows: auto minmax(auto, 1fr) auto;
+  font-family: sans-serif;
+}
+header {
+  font-size: 1em;
+  padding: 0.5em;
+}
+footer {
+  padding: 1em;
+  font-size: 1.2em;
+}
+footer>div {
+  margin: 0.3em 0.5em;
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.grid {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px;
+}
+
+.grid div {
+  border: 1px solid rgb(0,0,0, 0.06);
+}
+
+/*@media (hover: hover) {*/
+/*  .grid div:hover {*/
+/*    background: red;*/
+/*  }*/
+/*}*/
+
+/*.grid div.hover {*/
+/*  background: red;*/
+/*}*/
