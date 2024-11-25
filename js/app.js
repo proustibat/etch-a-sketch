@@ -30,10 +30,9 @@ const hoverEl = (el) => {
 }
 
 const buildGrid = () => {
-  const nbTilesX = Math.floor(elMain.clientWidth/TILESIZE);
-  const nbTilesY = Math.floor(elMain.clientHeight/TILESIZE);
+  const nbTilesX = Math.floor(elMain.offsetWidth/TILESIZE);
+  const nbTilesY = Math.floor(elMain.offsetHeight/TILESIZE);
   const nbTilesTotal = nbTilesX * nbTilesY;
-
 
   elGrid = document.querySelector(".grid");
   elGrid.style.width = `${nbTilesX*TILESIZE}px`;
@@ -56,7 +55,7 @@ const buildGrid = () => {
   elGrid.addEventListener("mouseover", onMouseOver);
 
   // Add touchstart event listener
-  elGrid.addEventListener("touchmove", onTouchMove)
+  elGrid.addEventListener("touchmove", onTouchMove);
 }
 
 const updateGrid = () => {
