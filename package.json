@@ -22,6 +22,9 @@
     "webpack-merge": "^5.10.0"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "css-loader": "^7.1.2",
+    "lodash": "^4.17.21",
+    "normalize.css": "^8.0.1",
+    "style-loader": "^4.0.0"
   }
 }
